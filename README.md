@@ -33,6 +33,8 @@ Le script se compose de plusieurs fonctions :
 - Une tâche de déconnexion qui s'exécute tous les jours à 18h00.
 Le script vérifie également l'état de connexion de l'utilisateur avant de se connecter ou de se déconnecter, afin d'éviter des connexions ou déconnexions inutiles.
 
+Modifiez les l'heures de connexion/deconnexion en modifiant les variables dans le `.env`.
+
 ## Utilisation
 
 - Exécutez le script en utilisant `npm run start`.
@@ -41,9 +43,9 @@ Le script vérifie également l'état de connexion de l'utilisateur avant de se 
 
 ## Limitations
 
-- Ce script a été testé avec succès uniquement sur la plateforme cible mentionnée dans le fichier .env. Il est possible que le script ne fonctionne pas correctement sur d'autres plateformes en raison de différences dans la structure de la page web ou dans les noms des éléments HTML.
+- Ce script a été testé avec succès uniquement sur la plateforme cible mentionnée dans le fichier `.env`. Il est possible que le script ne fonctionne pas correctement sur d'autres plateformes en raison de différences dans la structure de la page web ou dans les noms des éléments HTML.
 - Ce script n'est pas conçu pour être exécuté en continu, il est seulement prévu pour une utilisation ponctuelle à des horaires spécifiques.
-- Ce script utilise des identifiants de connexion stockés en clair dans le fichier .env. Il est fortement recommandé de ne pas stocker des informations de connexion sensibles de cette manière et de mettre en place des mécanismes de sécurité appropriés si vous souhaitez utiliser ce script dans un contexte de production.
+- Ce script utilise des identifiants de connexion stockés en clair dans le fichier `.env`. Il est fortement recommandé de ne pas stocker des informations de connexion sensibles de cette manière et de mettre en place des mécanismes de sécurité appropriés si vous souhaitez utiliser ce script dans un contexte de production.
 
 ## Author
 
