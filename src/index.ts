@@ -15,6 +15,8 @@ const AUTH_FORM_PASSWORD_SELECTOR = process.env.AUTH_FORM_PASSWORD_SELECTOR;
 const AUTH_FORM_SUBMIT_SELECTOR = process.env.AUTH_FORM_SUBMIT_SELECTOR;
 const LOGIN_CRON = process.env.LOGIN_CRON;
 const LOGOUT_CRON = process.env.LOGOUT_CRON;
+const LOGOUT_BUTTON_SELECTOR = process.env.LOGOUT_BUTTON_SELECTOR;
+const ONLINE_BUTTON_SELECTOR = process.env.ONLINE_BUTTON_SELECTOR;
 
 let isLoggedIn = false;
 let browser: Browser | null = null;
@@ -47,8 +49,10 @@ log("En attente...");
 // Fonction permettant de se connecter à la plateforme
 async function login(): Promise<void> {
   if (!isLoggedIn) {
-    const { browser } = await connect(); // Connexion à la plateforme
+    const { browser, page } = await connect(); // Connexion à la plateforme
     // Effectue une action pour marquer sa présence en ligne
+    await page.click(ONLINE_BUTTON_SELECTOR!);
+    log("Vous etes en ligne!");
     await browser.close(); // Ferme le navigateur
     log("Instance Chrome fermée");
     isLoggedIn = true; // Indique que l'utilisateur est connecté
@@ -63,6 +67,7 @@ async function logout(): Promise<void> {
     }
     await page.goto(DASHBOARD_URL!); // Accès à l'URL du dashboard
     // Effectue une action pour se déconnecter de la plateforme
+    await page.click(LOGOUT_BUTTON_SELECTOR!);
     await browser.close(); // Ferme le navigateur
     log("Instance Chrome fermée");
     isLoggedIn = false; // Indique que l'utilisateur est déconnecté
