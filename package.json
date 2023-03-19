@@ -1,0 +1,34 @@
+{
+  "name": "task-automatisation",
+  "version": "1.0.0",
+  "description": "Simple nodejs script to connect you on your website and click on button during a time",
+  "main": "task.js",
+  "type": "module",
+  "dependencies": {
+    "node-schedule": "^2.1.1",
+    "puppeteer-core": "^19.7.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node task.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlakvGhost/task-automatisation-exemple.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "script",
+    "javascript"
+  ],
+  "author": "BlakvGhost",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BlakvGhost/task-automatisation-exemple/issues"
+  },
+  "homepage": "https://github.com/BlakvGhost/task-automatisation-exemple#readme",
+  "devDependencies": {
+    "@types/node-schedule": "^2.1.0"
+  }
+}
