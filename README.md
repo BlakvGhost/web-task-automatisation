@@ -29,7 +29,7 @@ Le script se compose de plusieurs fonctions :
 
 ***Le script planifie deux tâches :***
 
-- Une tâche de connexion qui s'exécute tous les jours à 23h17.
+- Une tâche de connexion qui s'exécute tous les jours à 08h00.
 - Une tâche de déconnexion qui s'exécute tous les jours à 18h00.
 Le script vérifie également l'état de connexion de l'utilisateur avant de se connecter ou de se déconnecter, afin d'éviter des connexions ou déconnexions inutiles.
 
