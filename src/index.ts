@@ -17,7 +17,7 @@ let page: Page | null = null;
 
 // Fonction permettant d'afficher un message dans la console
 function log(message: string): void {
-  console.log("\n" + message);
+  console.log("\n\x1b[34m" + message + "\x1b[0m");
 }
 
 // Fonction permettant de se connecter à la plateforme
