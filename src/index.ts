@@ -76,12 +76,12 @@ async function logout(): Promise<void> {
   }
 }
 
-// Planification de la tâche de connexion à la plateforme à 23h17 chaque jour
+// Planification de la tâche de connexion à la plateforme à 08h00min chaque jour
 scheduleJob(LOGIN_CRON!, async () => {
   log("Se connecter à la plateforme...");
   await login();
 });
-
+// Planification de la tâche de deconnexion à la plateforme à 18h00min chaque jour
 scheduleJob(LOGOUT_CRON!, async () => {
   log("Se déconnecter de la plateforme...");
   await logout();
