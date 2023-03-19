@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node task.js",
+    "start": "tsc && node task.js",
     "build": "tsc"
   },
   "repository": {
