@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BlakvGhost/task-automatisation-exemple.git"
+    "url": "git+https://github.com/BlakvGhost/web-task-automatisation.git"
   },
   "keywords": [
     "Nodejs",
@@ -25,9 +25,9 @@
   "author": "BlakvGhost",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BlakvGhost/task-automatisation-exemple/issues"
+    "url": "https://github.com/BlakvGhost/web-task-automatisation/issues"
   },
-  "homepage": "https://github.com/BlakvGhost/task-automatisation-exemple#readme",
+  "homepage": "https://github.com/BlakvGhost/web-task-automatisation#readme",
   "devDependencies": {
     "@types/node-schedule": "^2.1.0"
   }
