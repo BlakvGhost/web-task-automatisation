@@ -49,7 +49,7 @@ Modifiez les l'heures de connexion/deconnexion en modifiant les variables dans l
 
 ## Author
 
-- [BlakvGhost](https://kabirou-dev.vercel.app)
+- [BlakvGhost Portfolio](https://kabirou-dev.vercel.app)
 
 ## Licence
 
