@@ -55,7 +55,7 @@ function connect() {
     });
 }
 console.clear();
-console.warn("Web Task Automatisation Script");
+console.warn("Web Task Automatisation Script Started");
 log("En attente...");
 // Fonction permettant de se connecter à la plateforme
 function login() {
