@@ -54,6 +54,8 @@ function connect() {
         return { browser, page }; // Renvoi du navigateur et de la page courante
     });
 }
+console.clear();
+console.warn("Web Task Automatisation Script");
 log("En attente...");
 // Fonction permettant de se connecter à la plateforme
 function login() {

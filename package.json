@@ -2,15 +2,15 @@
   "name": "web-task-automatisation",
   "version": "1.0.0",
   "description": "This project was created in order to automate a task on a web platform. It allows you to connect to a user account and click on a button to mark your online presence. In addition, it automatically disconnects at a given time.",
-  "main": "task.js",
-  "type": "module",
+  "main": "dist/index.js",
+  "type": "commonjs",
   "dependencies": {
     "node-schedule": "^2.1.1",
     "puppeteer-core": "^19.7.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node task.js",
+    "start": "tsc && node dist/index.js",
     "build": "tsc"
   },
   "repository": {
@@ -20,7 +20,10 @@
   "keywords": [
     "Nodejs",
     "script",
-    "javascript"
+    "javascript",
+    "typescript",
+    "typescript-script",
+    "task"
   ],
   "author": "BlakvGhost",
   "license": "MIT",
