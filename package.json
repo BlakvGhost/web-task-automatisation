@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/BlakvGhost/web-task-automatisation#readme",
   "devDependencies": {
-    "@types/node-schedule": "^2.1.0"
+    "@types/node-schedule": "^2.1.0",
+    "dotenv": "^16.0.3"
   }
 }
