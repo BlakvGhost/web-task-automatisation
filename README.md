@@ -23,8 +23,8 @@ Le script se compose de plusieurs fonctions :
 
 - `log(message: string)`: une fonction utilitaire pour afficher un message dans la console avec un retour à la ligne.
 - `connect()`: une fonction qui ouvre une instance de navigateur et une nouvelle page dans le navigateur, accède à la page de connexion de la plateforme, saisit les informations de connexion, clique sur le bouton de connexion et attend la navigation vers le dashboard. Cette fonction renvoie le navigateur et la page courante.
-- `login()`: une fonction qui appelle connect() pour se connecter à la plateforme et ferme ensuite l'instance de navigateur pour marquer sa présence en ligne.
-- `logout()`: une fonction qui appelle connect() pour accéder à la page du dashboard de la plateforme, effectue une action pour se déconnecter de la plateforme, puis ferme l'instance de navigateur pour marquer sa présence hors ligne.
+- `login()`: une fonction qui appelle `connect()` pour se connecter à la plateforme et ferme ensuite l'instance de navigateur pour marquer sa présence en ligne.
+- `logout()`: une fonction qui appelle `connect()` pour accéder à la page du dashboard de la plateforme, effectue une action pour se déconnecter de la plateforme, puis ferme l'instance de navigateur pour marquer sa présence hors ligne.
 - `scheduleJob()`: une fonction qui permet de planifier l'exécution d'une tâche à une heure spécifique, en utilisant une syntaxe similaire à celle de la crontab.
 
 ***Le script planifie deux tâches :***
