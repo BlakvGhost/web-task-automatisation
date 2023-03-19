@@ -4,12 +4,21 @@ import dotenv from "dotenv"; // importation du module permettant de charger les 
 
 dotenv.config(); // chargement des variables d'environnement depuis le fichier .env
 
+function avoidUndefinedError(texte: string | undefined): string {
+  return process.env[texte || ''] || '';
+}
+
 // Récupération des variables d'environnement
-const LOGIN_URL = process.env.LOGIN_URL;
-const DASHBOARD_URL = process.env.DASHBOARD_URL;
-const CHROME_PATH = { executablePath: process.env.CHROME_PATH };
-const LOGIN_EMAIL = process.env.LOGIN_EMAIL;
-const LOGIN_PASSWORD = process.env.LOGIN_PASSWORD;
+const LOGIN_URL = avoidUndefinedError('LOGIN_URL');
+const DASHBOARD_URL = avoidUndefinedError('DASHBOARD_URL');
+const CHROME_PATH = { executablePath: avoidUndefinedError('CHROME_PATH')};
+const LOGIN_EMAIL = avoidUndefinedError('LOGIN_EMAIL');
+const LOGIN_PASSWORD = avoidUndefinedError('LOGIN_PASSWORD');
+const AUTH_FORM_EMAIL_SELECTOR = avoidUndefinedError('AUTH_FORM_EMAIL_SELECTOR');
+const AUTH_FORM_PASSWORD_SELECTOR = avoidUndefinedError('AUTH_FORM_PASSWORD_SELECTOR');
+const AUTH_FORM_SUBMIT_SELECTOR = avoidUndefinedError('AUTH_FORM_SUBMIT_SELECTOR');
+const LOGIN_CRON = avoidUndefinedError('LOGIN_CRON');
+const LOGOUT_CRON = avoidUndefinedError('LOGOUT_CRON');
 
 let isLoggedIn = false;
 let browser: Browser | null = null;
@@ -28,9 +37,9 @@ async function connect(): Promise<{ browser: Browser; page: Page }> {
   log("Nouvelle page ouverte");
   await page.goto(LOGIN_URL!); // Accès à l'URL de connexion
   log("Page " + LOGIN_URL + " ouverte");
-  await page.type("#email", LOGIN_EMAIL!); // Saisie de l'adresse e-mail
-  await page.type("#password", LOGIN_PASSWORD!); // Saisie du mot de passe
-  await page.click("#signin-form button"); // Clic sur le bouton de connexion
+  await page.type(AUTH_FORM_EMAIL_SELECTOR, LOGIN_EMAIL!); // Saisie de l'adresse e-mail
+  await page.type(AUTH_FORM_PASSWORD_SELECTOR, LOGIN_PASSWORD!); // Saisie du mot de passe
+  await page.click(AUTH_FORM_SUBMIT_SELECTOR); // Clic sur le bouton de connexion
   log("Formulaire soumis");
   await page.waitForNavigation(); // Attente de la navigation
   log("Connecté avec succès");
@@ -65,12 +74,12 @@ async function logout(): Promise<void> {
 }
 
 // Planification de la tâche de connexion à la plateforme à 23h17 chaque jour
-scheduleJob("17 23 * * *", async () => {
+scheduleJob(LOGIN_CRON, async () => {
   log("Se connecter à la plateforme...");
   await login();
 });
 
-scheduleJob("0 18 * * *", async () => {
+scheduleJob(LOGOUT_CRON, async () => {
   log("Se déconnecter de la plateforme...");
   await logout();
 });
