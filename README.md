@@ -14,8 +14,17 @@ Ce projet a été créé dans le but d'automatiser une tâche sur une plateforme
 
 ## Installation
 
-- Clonez le dépôt en utilisant git clone <https://github.com/BlakvGhost/web-task-automatisation.git>.
-- Installez les dépendances en utilisant `npm install`.
+- Clonez le dépôt en utilisant la commande:
+
+```sh
+git clone https://github.com/BlakvGhost/web-task-automatisation.git
+```
+
+- Installez les dépendances en utilisant:
+
+```sh
+npm install
+```
 
 ## Fonctionnement
 
@@ -37,7 +46,12 @@ Modifiez les l'heures de connexion/deconnexion en modifiant les variables dans l
 
 ## Utilisation
 
-- Exécutez le script en utilisant `npm run start`.
+- Exécutez le script en utilisant:
+
+```sh
+npm run start
+```
+
 - Le script se connectera à la plateforme, cliquera sur le bouton pour marquer votre présence en ligne et se déconnectera automatiquement à l'heure spécifiée dans le fichier `index.ts`.
 - Pour arrêter le script, utilisez `CTRL+C`.
 
@@ -47,7 +61,7 @@ Modifiez les l'heures de connexion/deconnexion en modifiant les variables dans l
 - Ce script n'est pas conçu pour être exécuté en continu, il est seulement prévu pour une utilisation ponctuelle à des horaires spécifiques.
 - Ce script utilise des identifiants de connexion stockés en clair dans le fichier `.env`. Il est fortement recommandé de ne pas stocker des informations de connexion sensibles de cette manière et de mettre en place des mécanismes de sécurité appropriés si vous souhaitez utiliser ce script dans un contexte de production.
 
-## Author
+## Auteur
 
 - [BlakvGhost Portfolio](https://kabirou-dev.vercel.app)
 
