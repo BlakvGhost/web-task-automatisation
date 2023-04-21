@@ -1,4 +1,4 @@
-import { launch, Browser, Page } from "puppeteer-core"; // importation des modules nécessaires pour l'automation
+import { launch, Browser, Page } from "puppeteer-core"; // importation des modules nécessaires pour l'automatisation
 import { scheduleJob } from "node-schedule"; // importation du module permettant de programmer des tâches
 import dotenv from "dotenv"; // importation du module permettant de charger les variables d'environnement depuis un fichier .env
 
