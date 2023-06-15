@@ -63,7 +63,7 @@ npm run start
 
 ## Auteur
 
-- [BlakvGhost Portfolio](https://kabirou-dev.vercel.app)
+- [BlakvGhost Portfolio](https://kabirou-alassane.com)
 
 ## Licence
 
